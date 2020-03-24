@@ -23,7 +23,7 @@ const db = knex({
 
 //App and port
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const blue = '\x1b[34m%s\x1b[0m';
 
 //Middleware
