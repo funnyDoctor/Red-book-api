@@ -10,17 +10,6 @@ const signin = require('./controllers/signin');
 
 
 //Connect to DB
-const password = 'lokofan31';
-// const db = knex({
-//     client: 'pg',
-//     connection: {
-//         host: '127.0.0.1',
-//         user: 'postgres',
-//         password: password,
-//         database: 'red book'
-//     }
-// });
-
 const db = knex({
     client: 'pg',
     connection: {
@@ -39,7 +28,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //Methods
-app.get('/', (req, res) => { res.send("Is working!!!") });
+app.get('/', (req, res) => { res.send("Оно живое:)") });
 app.post('/signin', signin.handleSignin(db, bcrypt));
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) });
 
