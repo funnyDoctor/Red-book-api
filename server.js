@@ -8,7 +8,6 @@ const knex = require('knex');
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 
-
 //Connect to DB
 const db = knex({
     client: 'pg',
